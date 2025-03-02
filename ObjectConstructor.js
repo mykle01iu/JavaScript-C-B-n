@@ -11,7 +11,7 @@ function User(firstName, lastName, avarta) {
 }
 
 var author = new User('Hoang', 'Khai', 'Avatar');
-var user = new User('Doo','Nal','Avarta')
+var user = new User('Doo','Nal','Avatar')
 
 author.tittle = 'Welcome to Hoang Dinh Khai'
 user.comment = 'Hay quá anh ơi'
