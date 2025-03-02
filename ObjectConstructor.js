@@ -10,6 +10,8 @@ function User(firstName, lastName, avarta) {
     }
 }
 
+User.prototype.addName = 'Lan';
+
 var author = new User('Hoang', 'Khai', 'Avatar');
 var user = new User('Doo','Nal','Avatar')
 
@@ -18,3 +20,4 @@ user.comment = 'Hay quá anh ơi'
 
 console.log(author.getName());
 console.log(user);
+console.log(user.addName); //Object prototype
