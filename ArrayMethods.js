@@ -63,3 +63,35 @@ var timKiem2 = courses.filter(function(course){
     return course.name ===  'Ruby';
 });
 console.log(timKiem2);
+
+//6.map(): thay đổi element của 1 array
+var newCourses = courses.map(function(course){
+    return {
+        id: course.id,
+        name: `Khoa hoc: ${course.name}`,
+        coin: course.coin,
+        coinText: `Gia: ${course.coin}`
+    };
+});
+console.log(courses)
+
+//7.reduce():
+var i = 0;
+function coinHandler(acumentlator, currentValue, currentIndex, originArray){
+    i++;
+
+    var total = acumentlator + currentValue.coin;
+
+    console.table({
+        'Lượt chạy:': i,
+        'Biến tích trữ': acumentlator,
+        'Giá khóa học: ': currentValue.coin,
+        'Tích trữ được: ': total
+    })
+    console.log(currentValue);
+
+    return total;
+};
+
+var totalCoin = courses.reduce(coinHandler, 0); 
+console.log(totalCoin)
